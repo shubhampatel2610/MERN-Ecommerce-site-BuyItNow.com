@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Montserrat', sans-serif; */
+/* font-family: 'Josefin Sans', sans-serif; */
+
+
+ /* navbar css */
+ .navbar{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    /* text-transform: uppercase; */
+    box-shadow: 0 8px 6px -6px gray;
+    --webkit-box-shadow: 0 8px 6px -6px gray;
+    border-bottom: 0.2px solid gray !important;
+    background-color: #da0037 !important;
+ }
+ 
+ .nav-link{
+    font-weight: 300 !important;
+    color: white;
+ }
+
+ .nav-link:hover{
+    color: #EDEDED;
+ }
+
+ .active{
+    color: #EDEDED !important;
+    border-bottom: 1px solid #EDEDED;
+ }
+
+ .navbar-brand{
+    font-weight: 700;
+    font-family: "roboto", sans-serif;
+    letter-spacing: 5px;
+    color: white;
+ }
+
+ .logo{
+    size: 20px;
+    padding-right: 10px;
+ }
+
+ .navbar-brand:hover{
+    color: yellow;
+ }
+
+
+ /* Footer */
+ .footer{
+    color: white;
+    padding: 25px;
+    background-color: #da0037;
+    text-align: center;
+ }
+
+ .footer a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+ }
+
+ .footer a:hover{
+    color: black;
+    border-bottom: 1px solid black;;
+ }
+
+ .footer .footer-site:hover{
+    color: yellow;
+    border-bottom: 0;
+
+ }
+
+
+ /* page not found css */
+ .pnf {
+    display: flex;
+    min-height: 65vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pnf-title {
+    font-size: 100px;
+    font-weight: 700;
+  }
+  
+  .pnf-heading {
+    font-weight: normal;
+  }
+  
+  .pnf-btn {
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+  }
+  .pnf-btn:hover {
+    background-color: black;
+    color: white;
+  }
+
+
+  /* contact us */
+  .contactUs {
+    margin: 0;
+    padding: 0;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-button{
+   background-color: #da0037 !important;
+  }
+
+  .product-link {
+    text-decoration: none !important;
+    color: black !important;
+  }
+  
+  .cat-btn {
+    padding: 40px 0px;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .cat-btn:hover {
+    background-color: #434343;
+    color: white;
+  }
+
+
+  /* sign up - sign in page */
+  .sign-form{
+   width: 20%;
+  }
+
+  .sign-up{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 70vh;
+   flex-direction: column;
+  }
+
+  .btstrp-buttons{
+   background: #da0037;
+   border: 0px;
+  }
+
+  .custom-formfield{
+   border-color: #da0037;
+  }
+
+  .btstrp-buttons:hover{
+   background: #ff0040
+  }
+
+  .btstrp-buttons:active{
+   background-color: #da0037 !important;
+  }
+
+  .custom-list a{
+   background-color: #da0037 !important;
+   color: #EDEDED;
+   font-weight: bold;
+   border-radius: 5px !important;
+   border-color: white !important;
+  }
+
+  .custom-list a:hover{
+   background-color: #ff0040 !important;
+   color: #EDEDED;
+   border-radius: 10px !important;
+   border-color: white !important;
+  }
+
+  .custom-list a:active{
+   background-color: #da0037 !important;
+  }
+
+  
+  .btn{
+   font-weight: bold;
+  }
+
+  .dropdown-menu{
+   font-weight: bold;
+   background-color: #da0037;
+  }
+
+  .dropdown-menu a{
+   color: #EDEDED !important;
+  }
+
+  .dropdown-item.active, .dropdown-item:active {
+   color: var(--bs-dropdown-link-active-color);
+   text-decoration: none;
+   background-color: #da0037;
+}
+
+  .dropdown a:hover{
+   background-color: #ff0040 !important;
+  }
+
+  .product-link{
+   text-decoration: none !important;
+   color: #da0037 !important;
+   font-weight: bold;
+  }
+
+  .product-link:hover{
+   cursor: pointer;
+   color: #ff0040 !important;
+  }
+
+  .search-icon{
+      color: #EDEDED !important;
+      margin-right: 40px !important;
+  }
