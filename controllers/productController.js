@@ -252,3 +252,25 @@ export const productListController = async (req, res) => {
     });
   }
 };
+
+// search product
+export const searchProductController = async (req, res) => {
+  try {
+    const { keyword } = req.params;
+    const results = await productModel
+      .find({
+        $or: [
+          { name: { $regex: keyword, $options: "i" } },
+          { description: { $regex: keyword, $options: "i" } },
+        ],
+      })
+      .select("-photo");
+    res.json(results);
+  } catch (error) {
+    res.status(400).send({
+      success: false,
+      message: "Error while searching product ☹...",
+      error,
+    });
+  }
+};
