@@ -1,11 +1,15 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { UseAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 import SearchInput from "../form/searchInput";
+import useCategory from "../../hooks/useCategory";
 
-const header = () => {
+const Header = () => {
   const [auth, setAuth] = UseAuth();
+  const categories = useCategory();
+
   const handleSignOut = () => {
     setAuth({
       ...auth,
@@ -32,7 +36,6 @@ const header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              {/* <MdAddShoppingCart /> */}
               🛒 BuyItNow.com
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -42,11 +45,32 @@ const header = () => {
                   HOME
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink to="/categories" className="nav-link">
+              <li className="nav-item dropdown">
+                <Link
+                  className="nav-link dropdown-toggle"
+                  style={{ color: "#EDEDED" }}
+                  to="/categories"
+                  data-bs-toggle="dropdown"
+                >
                   Categories
-                </NavLink>
+                </Link>
+                <ul className="dropdown-menu">
+                  {/* <Link className="dropdown-item" to="/categories">
+                    All categories
+                  </Link> */}
+                  {categories.map((c) => (
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to={`/category/${c.slug}`}
+                      >
+                        {c.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </li>
+
               {!auth.user ? (
                 <>
                   <li className="nav-item">
@@ -110,4 +134,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
