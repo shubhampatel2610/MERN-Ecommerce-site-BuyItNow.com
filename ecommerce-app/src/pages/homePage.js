@@ -162,7 +162,10 @@ const HomePage = () => {
           <h1 className="text-center">All products:</h1>
           <div className="d-flex flex-wrap">
             {products?.map((product) => (
-              <div className="card m-2 mx-4" style={{ width: "18rem" }}>
+              <div
+                className="card m-2 mx-4"
+                style={{ width: "18rem", borderColor: "#da0037" }}
+              >
                 <img
                   src={`/api/v1/product/get-product-photo/${product._id}`}
                   className="card-img-top"
