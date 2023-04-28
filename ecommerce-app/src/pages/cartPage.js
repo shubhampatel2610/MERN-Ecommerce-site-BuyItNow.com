@@ -97,6 +97,7 @@ const CartPage = () => {
             {cart?.map((item) => (
               <div
                 className="row card flex-row m-4"
+                key={item._id}
                 style={{ borderColor: "#da0037" }}
               >
                 <div className="col-md-4">
