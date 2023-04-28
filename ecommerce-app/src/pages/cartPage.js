@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/layout/layout";
 import { UseCart } from "../context/cart";
 import { UseAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
+import DropIn from "braintree-web-drop-in-react";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const CartPage = () => {
   const [cart, setCart] = UseCart();
   const [auth, setAuth] = UseAuth();
   const navigate = useNavigate();
+  const [clientToken, setClientToken] = useState("");
+  const [instance, setInstance] = useState("");
+  const [loading, setLoading] = useState(false);
 
   // total price
   const totalPrice = () => {
@@ -32,6 +38,40 @@ const CartPage = () => {
       localStorage.setItem("cartItems", JSON.stringify(myCart));
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  // get payment gateway token
+  const getToken = async () => {
+    try {
+      const { data } = await axios.get("/api/v1/product/braintree/token");
+      setClientToken(data?.clientToken);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getToken();
+  }, [auth?.token]);
+
+  // handle payment function
+  const handlePayment = async () => {
+    try {
+      setLoading(true);
+      const { nonce } = await instance.requestPaymentMethod();
+      const { data } = await axios.post("/api/v1/product/braintree/payment", {
+        nonce,
+        cart,
+      });
+      setLoading(false);
+      localStorage.removeItem("cartItems");
+      setCart([]);
+      navigate("/dashboard/user/orders");
+      toast.success("Payment successful 🙂...");
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
     }
   };
 
@@ -74,8 +114,7 @@ const CartPage = () => {
                   </p>
                   <p className="my-3">Price: {item.price} Rs.</p>
                   <button
-                    className="btn btstrp-buttons my-2"
-                    style={{ color: "white" }}
+                    className="btn btn-primary btstrp-buttons my-2"
                     onClick={() => removeCartItem(item._id)}
                   >
                     REMOVE
@@ -87,7 +126,7 @@ const CartPage = () => {
 
           <div
             className="col-md-4 my-4 card"
-            style={{ borderColor: "#da0037", height: "70vh" }}
+            style={{ borderColor: "#da0037", height: "95vh" }}
           >
             <h3 className="text-center mt-2">CHECKOUT</h3>
             <hr style={{ color: "#da0037" }} />
@@ -131,6 +170,29 @@ const CartPage = () => {
                 )}
               </div>
             )}
+            <div className="mt-2">
+              {!clientToken || !cart.length ? (
+                ""
+              ) : (
+                <>
+                  <DropIn
+                    options={{
+                      authorization: clientToken,
+                      paypal: {
+                        flow: "vault",
+                      },
+                    }}
+                    onInstance={(instance) => setInstance(instance)}
+                  />
+                  <button
+                    className="btn btn-primary btstrp-buttons"
+                    onClick={handlePayment}
+                  >
+                    {loading ? "Processing..." : "Make Payment"}
+                  </button>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
