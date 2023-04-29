@@ -164,7 +164,7 @@ const HomePage = () => {
             {products?.map((product) => (
               <div
                 className="card m-2 mx-4"
-                style={{ width: "18rem", borderColor: "#da0037" }}
+                style={{ width: "18rem", borderColor: "#146C94" }}
               >
                 <img
                   src={`/api/v1/product/get-product-photo/${product._id}`}
@@ -203,7 +203,7 @@ const HomePage = () => {
           <div className="m-2 p-3">
             {products && products.length < total && (
               <button
-                className="btn btn-outline-danger"
+                className="btn btn-primary btstrp-buttons"
                 onClick={(e) => {
                   e.preventDefault();
                   setPage(page + 1);

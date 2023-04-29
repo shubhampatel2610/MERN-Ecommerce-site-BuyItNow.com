@@ -10,7 +10,7 @@
 }
 
 .form-container form{
-    box-shadow: #da0037 0px 2px 10px;
+    box-shadow: #146C94 0px 2px 10px;
     border-radius: 10px;
     padding: 20px;
     background-color: #5a5a5a;
@@ -33,14 +33,14 @@
 .form-container form button{
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #da0037;
+    background-color: #146C94;
     color: white;
     width: 100%;
 }
 
 .form-container form button:hover{
     border: 1px solid black;
-    background-color: #d64569;
+    background-color: #19A7CE;
 }
 
 .form-container a{

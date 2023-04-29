@@ -98,7 +98,7 @@ const CartPage = () => {
               <div
                 className="row card flex-row m-4"
                 key={item._id}
-                style={{ borderColor: "#da0037" }}
+                style={{ borderColor: "#146C94" }}
               >
                 <div className="col-md-4">
                   <img
@@ -127,10 +127,10 @@ const CartPage = () => {
 
           <div
             className="col-md-4 my-4 card"
-            style={{ borderColor: "#da0037", height: "95vh" }}
+            style={{ borderColor: "#146C94", height: "95vh" }}
           >
             <h3 className="text-center mt-2">CHECKOUT</h3>
-            <hr style={{ color: "#da0037" }} />
+            <hr style={{ color: "#146C94" }} />
             <h5>Total price: {totalPrice()} Rs.</h5>
             {auth?.user?.address ? (
               <>
@@ -139,7 +139,7 @@ const CartPage = () => {
                     Current address: {auth?.user?.address}
                   </h5>
                   <button
-                    className="btn btn-outline-danger"
+                    className="btn btn-primary btstrp-buttons"
                     onClick={() => {
                       navigate("/dashboard/user/profile");
                     }}
@@ -152,7 +152,7 @@ const CartPage = () => {
               <div className="mb-3">
                 {auth?.token ? (
                   <button
-                    className="btn btn-outline-danger"
+                    className="btn btn-primary btstrp-buttons"
                     onClick={() => {
                       navigate("/dashboard/user/profile");
                     }}
@@ -161,7 +161,7 @@ const CartPage = () => {
                   </button>
                 ) : (
                   <button
-                    className="btn btn-outline-danger"
+                    className="btn btn-primary btstrp-buttons"
                     onClick={() => {
                       navigate("/signin", { state: "/cart" });
                     }}

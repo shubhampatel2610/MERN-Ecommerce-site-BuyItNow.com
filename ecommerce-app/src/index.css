@@ -9,7 +9,6 @@
 /* font-family: 'Montserrat', sans-serif; */
 /* font-family: 'Josefin Sans', sans-serif; */
 
-
  /* navbar css */
  .navbar{
     font-family: 'Montserrat', sans-serif;
@@ -20,28 +19,29 @@
     box-shadow: 0 8px 6px -6px gray;
     --webkit-box-shadow: 0 8px 6px -6px gray;
     border-bottom: 0.2px solid gray !important;
-    background-color: #da0037 !important;
+    background-color: #F6F1F1 !important;
  }
  
  .nav-link{
     font-weight: 300 !important;
-    color: white;
+    color: #146C94 !important;
+    font-weight: bold !important;
  }
 
  .nav-link:hover{
-    color: #EDEDED;
+    color: #19A7CE;
  }
 
  .active{
-    color: #EDEDED !important;
-    border-bottom: 1px solid #EDEDED;
+    color: #146C94 !important;
+    border-bottom: 1px solid #19A7CE;
  }
 
  .navbar-brand{
     font-weight: 700;
     font-family: "roboto", sans-serif;
     letter-spacing: 5px;
-    color: white;
+    color: #146C94;
  }
 
  .logo{
@@ -50,31 +50,30 @@
  }
 
  .navbar-brand:hover{
-    color: yellow;
+    color: #19A7CE;
  }
-
 
  /* Footer */
  .footer{
-    color: white;
+    color: #146C94;
     padding: 25px;
-    background-color: #da0037;
+    background-color: #F6F1F1;
     text-align: center;
  }
 
  .footer a{
     text-decoration: none;
-    color: white;
+    color: #146C94;
     padding: 5px 20px;
  }
 
  .footer a:hover{
-    color: black;
-    border-bottom: 1px solid black;;
+    color: #19A7CE;
+    border-bottom: 1px solid #19A7CE;;
  }
 
  .footer .footer-site:hover{
-    color: yellow;
+    color: #19A7CE;
     border-bottom: 0;
 
  }
@@ -122,7 +121,7 @@
   }
   
   .contact-button{
-   background-color: #da0037 !important;
+   background-color: #146C94 !important;
   }
 
   .product-link {
@@ -135,6 +134,7 @@
     font-size: 24px;
     text-transform: uppercase;
   }
+
   .cat-btn:hover {
     background-color: #434343;
     color: white;
@@ -155,24 +155,24 @@
   }
 
   .btstrp-buttons{
-   background: #da0037;
+   background: #146C94;
    border: 0px;
   }
 
   .custom-formfield{
-   border-color: #da0037;
+   border-color: #146C94;
   }
 
   .btstrp-buttons:hover{
-   background: #ff0040
+   background: #19A7CE
   }
 
   .btstrp-buttons:active{
-   background-color: #da0037 !important;
+   background-color: #146C94 !important;
   }
 
   .custom-list a{
-   background-color: #da0037 !important;
+   /* background-color: #146C94 !important; */
    color: #EDEDED;
    font-weight: bold;
    border-radius: 5px !important;
@@ -180,24 +180,23 @@
   }
 
   .custom-list a:hover{
-   background-color: #ff0040 !important;
+   background-color: #19A7CE !important;
    color: #EDEDED;
    border-radius: 10px !important;
    border-color: white !important;
   }
 
   .custom-list a:active{
-   background-color: #da0037 !important;
+   background-color: #146C94 !important;
   }
 
-  
   .btn{
    font-weight: bold;
   }
 
   .dropdown-menu{
    font-weight: bold;
-   background-color: #da0037;
+   background-color: #146C94;
   }
 
   .dropdown-menu a{
@@ -207,22 +206,22 @@
   .dropdown-item.active, .dropdown-item:active {
    color: var(--bs-dropdown-link-active-color);
    text-decoration: none;
-   background-color: #da0037;
+   background-color: #146C94;
 }
 
   .dropdown a:hover{
-   background-color: #ff0040 !important;
+   background-color: #19A7CE !important;
   }
 
   .product-link{
    text-decoration: none !important;
-   color: #da0037 !important;
+   color: #146C94 !important;
    font-weight: bold;
   }
 
   .product-link:hover{
    cursor: pointer;
-   color: #ff0040 !important;
+   color: #19A7CE !important;
   }
 
   .search-icon{
