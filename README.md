@@ -14,3 +14,6 @@
 
 ## Braintree transaction tracking
 ![braintree_transaction](https://user-images.githubusercontent.com/105007678/235343136-a7d8bcc7-6389-4edc-950f-9b4c47d017d2.png)
+
+## Database - mongoDB
+![Database](https://user-images.githubusercontent.com/105007678/235343280-6e8977d9-5811-4ea7-8b14-8fdc0e0b8114.png)
