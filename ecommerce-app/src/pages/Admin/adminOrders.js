@@ -57,7 +57,7 @@ const AdminOrders = () => {
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1>orders</h1>
+            <h1>Customers' orders</h1>
             {orders.map((item, index) => {
               return (
                 <div className="border shadow">

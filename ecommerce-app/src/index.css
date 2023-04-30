@@ -228,3 +228,12 @@
       color: #EDEDED !important;
       margin-right: 40px !important;
   }
+
+  .menu-button{
+   background-color: #146C94;
+  }
+
+  .menu-button.active{
+   background-color: #146C94 !important;
+   color: #EDEDED !important;
+  }
