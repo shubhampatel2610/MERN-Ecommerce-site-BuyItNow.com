@@ -7,8 +7,8 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "ecommerce-app": "npm start --prefix ./ecommerce-app",
-    "dev": "concurrently \"npm run server\" \"npm run ecommerce-app\""
+    "client": "npm start --prefix ./client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "Shubham Patel",
