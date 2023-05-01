@@ -27,4 +27,4 @@
   - BRAINTREE_PUBLIC_KEY - // enter your own braintree public key without quotes //
   - BRAINTREE_PRIVATE_KEY - // enter your own braintree private key without quotes //
 2. Make a ".env" file in 'client' directory and make 1 variable as given below:
-  - REACT_APP_API = http://localhost://set port number you like//
+  - REACT_APP_API = http://localhost: //set port number you like//
