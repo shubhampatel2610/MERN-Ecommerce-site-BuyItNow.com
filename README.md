@@ -17,3 +17,14 @@
 
 ## Database - mongoDB
 ![Database](https://user-images.githubusercontent.com/105007678/235343280-6e8977d9-5811-4ea7-8b14-8fdc0e0b8114.png)
+
+
+## After you clone this repository, do these 2 things first:
+1. Make a ".env" file in 'root' directory and make 5 variables as given below:
+  - MONGO_URL - // enter your own mongo db url without quotes //
+  - JWT_SECRET - // enter any random key around 15-20 characters without quotes//
+  - BRAINTREE_MERCHANT_ID - // enter your own braintree merchant id without quotes //
+  - BRAINTREE_PUBLIC_KEY - // enter your own braintree public key without quotes //
+  - BRAINTREE_PRIVATE_KEY - // enter your own braintree private key without quotes //
+2. Make a ".env" file in 'client' directory and make 1 variable as given below:
+  - REACT_APP_API = http://localhost: //set port number you like//
