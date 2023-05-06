@@ -12,12 +12,23 @@
 ## User permissions
 ![User_dashboard](https://user-images.githubusercontent.com/105007678/235343125-07aa3597-a03f-441e-ae23-b0852349498b.png)
 
-## Braintree transaction tracking
-![braintree_transaction](https://user-images.githubusercontent.com/105007678/235343136-a7d8bcc7-6389-4edc-950f-9b4c47d017d2.png)
-
 ## Database - mongoDB
 ![Database](https://user-images.githubusercontent.com/105007678/235343280-6e8977d9-5811-4ea7-8b14-8fdc0e0b8114.png)
 
+- User collection
+![user_collection](https://user-images.githubusercontent.com/105007678/236627953-a2460e14-b42f-4e9c-ac95-69846f52bdb4.png)
+
+- Category collection
+![categories_collection](https://user-images.githubusercontent.com/105007678/236627957-b9ec7137-9efc-4105-b914-670be589fb20.png)
+
+- Products collection
+![products_collection](https://user-images.githubusercontent.com/105007678/236627973-b8c210af-6e1c-45dd-a960-b4f0202b5ede.png)
+
+- Orders collection
+![orders_collection](https://user-images.githubusercontent.com/105007678/236627986-655e2d13-9a56-4b4a-aedc-e84d0e97ff15.png)
+
+## Braintree transaction tracking
+![braintree_transaction](https://user-images.githubusercontent.com/105007678/235343136-a7d8bcc7-6389-4edc-950f-9b4c47d017d2.png)
 
 ## After you clone this repository, do these 2 things first:
 1. Make a ".env" file in 'root' directory and make 5 variables as given below:
