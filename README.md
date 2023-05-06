@@ -15,16 +15,16 @@
 ## Database - mongoDB
 ![Database](https://user-images.githubusercontent.com/105007678/235343280-6e8977d9-5811-4ea7-8b14-8fdc0e0b8114.png)
 
-- User collection
+### User collection
 ![user_collection](https://user-images.githubusercontent.com/105007678/236627953-a2460e14-b42f-4e9c-ac95-69846f52bdb4.png)
 
-- Category collection
+### Category collection
 ![categories_collection](https://user-images.githubusercontent.com/105007678/236627957-b9ec7137-9efc-4105-b914-670be589fb20.png)
 
-- Products collection
+### Products collection
 ![products_collection](https://user-images.githubusercontent.com/105007678/236627973-b8c210af-6e1c-45dd-a960-b4f0202b5ede.png)
 
-- Orders collection
+### Orders collection
 ![orders_collection](https://user-images.githubusercontent.com/105007678/236627986-655e2d13-9a56-4b4a-aedc-e84d0e97ff15.png)
 
 ## Braintree transaction tracking
